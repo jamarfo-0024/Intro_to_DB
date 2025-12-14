@@ -5,7 +5,7 @@ try:
     connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="cellobiose1234" 
+        password="cellobiose1234"
     )
 
     if connection.is_connected():
@@ -16,8 +16,8 @@ try:
 
         print("Database 'alx_book_store' created successfully!")
 
-except mysql.connector.Error as e:
-    print("Error while connecting to MySQL:", e)
+except mysql.connector.Error:
+    print("Error while connecting to MySQL")
 
 finally:
     # CLOSE CONNECTION
